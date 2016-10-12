@@ -1,0 +1,77 @@
+<head>
+  <title>Happy Birthday</title>
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Josefin+Slab" rel="stylesheet">
+</head>
+
+<body>
+  {{> hello}}
+</body>
+
+<template name="hello">
+  {{#with activeStep}}
+  {{#if step1}}
+  <section class="coupon">
+    <header class="birthday-message-container">
+      <h2 class="birthday-message text-center">
+        Happy Birthday, My Love.
+      </h2>
+      <h2 class="birthday-message text-center">
+        Today's a special day,
+      </h2>
+      <h2 class="birthday-message text-center">
+        because 24 years ago today, you came along.
+      </h2>
+    </header>
+    <section class="text-center">
+      <button id="step1" class="continue" type="text"><h2>Next</h2></button>
+    </section>
+  </section>
+  {{/if}}
+
+  {{#if step2}}
+  <section class="coupon">
+    <header class="birthday-message-container">
+      <h2 class="birthday-message text-center">
+        I know there's some presents that you would love,
+      </h2>
+      <h2 class="birthday-message text-center">
+        but I want you to choose because I'm always wrong,
+      </h2>
+      <h2 class="birthday-message text-center">
+        and you're always so right.
+      </h2>
+    </header>
+    <section class="text-center">
+      <button class="back" type="text"><h2>Go Back</h2></button>
+      <button class="continue" type="text"><h2>Next</h2></button>
+    </section>
+  </section>
+  {{/if}}
+
+  {{#if step3}}
+  <section class="coupon">
+    <header class="birthday-message-container no-mg-bottom">
+      <h2 class="birthday-message text-center">
+        Pick a day,
+      </h2>
+      <h2 class="birthday-message text-center">
+        Pick a time,
+      </h2>
+      <h2 class="birthday-message text-center">
+        Pick a...
+      </h2>
+    </header>
+    <section class="text-center .image-container">
+      <div>
+        <img class="img-thumb" src="./boots.jpg">
+        <img class="img-thumb" src="./ring.jpeg">
+      </div>
+      <div>
+        <img class="img-thumb" src="./coat.jpeg">
+        <img class="img-thumb" src="./other.jpeg">
+      </div>
+    </section>
+  </section>
+  {{/if}}
+  {{/with}}
+</template>
