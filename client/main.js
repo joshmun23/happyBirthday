@@ -30,13 +30,5 @@ Template.hello.events({
     let currentStep = Session.get('activeStep');
 
     Session.set('activeStep', currentStep + 1);
-    // $('.coupon').addClass('flip');
-
-    // setTimeout(function() {
-    //   // $('.coupon').removeClass('flip');
-    // }, 4000);
-  },
-  'click .img-thumb'(e, t) {
-    $(e.target).addClass('img');
   }
 });
