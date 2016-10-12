@@ -7,7 +7,7 @@ Template.hello.onCreated(function helloOnCreated() {
   // counter starts at 0
   // this.counter = new ReactiveVar(0);
   Session.setDefault('activeStep', 1);
-  Session.set('activeStep', 3);
+  Session.set('activeStep', 1);
 });
 
 Template.hello.helpers({
