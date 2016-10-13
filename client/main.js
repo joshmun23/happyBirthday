@@ -31,7 +31,6 @@ Template.hello.helpers({
     return Session.get('activeStep') === 3;
   },
   showThumbs() {
-    debugger;
     return Session.get('showThumbs');
   },
   activePicture() {
