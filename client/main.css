@@ -66,6 +66,11 @@ button.back {
   height: 75px;
 }
 
+.img-md {
+  width: 150px;
+  height: 150px;
+}
+
 .no-mg-bottom {
   margin-bottom: 0 !important;
 }

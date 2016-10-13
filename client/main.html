@@ -11,7 +11,7 @@
 <template name="hello">
   {{#if step0}}
   <section class="coupon img-cover">
-    <header class="birthday-message-container white-font-color text-shadow" style="padding-top: 25px;">
+    <header class="birthday-message-container white-font-color text-shadow" style="padding-top: 30px;">
       <h2 class="birthday-message text-center">
         <i class="fa fa-heart red-font-color"></i>
       </h2>
@@ -29,7 +29,7 @@
   {{/if}}
   {{#if step1}}
   <section class="coupon">
-    <header class="birthday-message-container white-font-color text-shadow" style="padding-top: 25px;">
+    <header class="birthday-message-container white-font-color text-shadow" style="padding-top: 30px;">
       <h2 class="birthday-message text-center">
         Happy Birthday, My Love.
       </h2>
@@ -49,7 +49,7 @@
 
   {{#if step2}}
   <section class="coupon">
-    <header class="birthday-message-container white-font-color text-shadow" style="padding-top: 25px;">
+    <header class="birthday-message-container white-font-color text-shadow" style="padding-top: 30px;">
       <h2 class="birthday-message text-center">
         Thanks for all the memories we've shared
       </h2>
@@ -69,12 +69,13 @@
 
   {{#if step3}}
   <section class="coupon">
-    <header class="birthday-message-container white-font-color text-shadow no-mg-bottom" style="padding-top: 25px;">
+    <header class="birthday-message-container white-font-color text-shadow no-mg-bottom" style="padding-top: 30px;">
       <h2 class="birthday-message text-center">
-        Pick a date, pick a time, pick a present (for $200).
+        Pick a date, pick a time, pick a present.
       </h2>
     </header>
     <section class="text-center .image-container">
+      {{#if showThumbs}}
       <div>
         <img class="img-thumb" src="./boots.jpg">
         <img class="img-thumb" src="./ring.jpeg">
@@ -83,6 +84,9 @@
         <img class="img-thumb" src="./coat.jpeg">
         <img class="img-thumb" src="./other.jpeg">
       </div>
+      {{else}}
+        <img class="img-md" src="{{activePicture}}">
+      {{/if}}
     </section>
   </section>
   {{/if}}
