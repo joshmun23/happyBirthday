@@ -1,6 +1,7 @@
 <head>
   <title>Happy Birthday</title>
   <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Josefin+Slab" rel="stylesheet">
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -8,10 +9,27 @@
 </body>
 
 <template name="hello">
-  {{#with activeStep}}
+  {{#if step0}}
+  <section class="coupon img-cover">
+    <header class="birthday-message-container white-font-color text-shadow" style="padding-top: 25px;">
+      <h2 class="birthday-message text-center">
+        <i class="fa fa-heart red-font-color"></i>
+      </h2>
+      <h2 class="birthday-message text-center">
+        Wouldn't it be great if
+      </h2>
+      <h2 class="birthday-message text-center">
+        We could hit the paws button
+      </h2>
+    </header>
+    <section class="text-center">
+      <button class="continue white-bg-low-opacity" type="text"><h2><i class="fa fa-paw green-font-color bold-font transform-right"></i> <i class="fa fa-paw green-font-color bold-font transform-right"></i></h2></button>
+    </section>
+  </section>
+  {{/if}}
   {{#if step1}}
   <section class="coupon">
-    <header class="birthday-message-container">
+    <header class="birthday-message-container white-font-color text-shadow" style="padding-top: 25px;">
       <h2 class="birthday-message text-center">
         Happy Birthday, My Love.
       </h2>
@@ -23,42 +41,37 @@
       </h2>
     </header>
     <section class="text-center">
-      <button id="step1" class="continue" type="text"><h2>&gt;</h2></button>
+      <button class="back white-bg-low-opacity" type="text"><h2><i class="fa fa-paw red-font-color bold-font transform-left"></i>  <i class="fa fa-paw red-font-color bold-font transform-left"></i> </h2></button>
+      <button class="continue white-bg-low-opacity" type="text"><h2><i class="fa fa-paw green-font-color bold-font transform-right"></i> <i class="fa fa-paw green-font-color bold-font transform-right"></i></h2></button>
     </section>
   </section>
   {{/if}}
 
   {{#if step2}}
   <section class="coupon">
-    <header class="birthday-message-container">
+    <header class="birthday-message-container white-font-color text-shadow" style="padding-top: 25px;">
       <h2 class="birthday-message text-center">
-        I know there's some presents that you would love,
+        Thanks for all the memories we've shared
       </h2>
       <h2 class="birthday-message text-center">
-        but I want you to choose because I'm always so wrong
+        and for all the love you give.
       </h2>
       <h2 class="birthday-message text-center">
-        and you're always so right.
+        <i class="fa fa-heart red-font-color"></i>
       </h2>
     </header>
     <section class="text-center">
-      <button class="back" type="text"><h2>&lt;</h2></button>
-      <button class="continue" type="text"><h2>&gt;</h2></button>
+      <button class="back white-bg-low-opacity" type="text"><h2><i class="fa fa-paw red-font-color bold-font transform-left"></i> <i class="fa fa-paw red-font-color bold-font transform-left"></i> </h2></button>
+      <button class="continue white-bg-low-opacity" type="text"><h2><i class="fa fa-paw green-font-color bold-font transform-right"></i> <i class="fa fa-paw green-font-color bold-font transform-right"></i></h2></button>
     </section>
   </section>
   {{/if}}
 
   {{#if step3}}
   <section class="coupon">
-    <header class="birthday-message-container no-mg-bottom">
+    <header class="birthday-message-container white-font-color text-shadow no-mg-bottom" style="padding-top: 25px;">
       <h2 class="birthday-message text-center">
-        So Pick a day,
-      </h2>
-      <h2 class="birthday-message text-center">
-        Pick a time,
-      </h2>
-      <h2 class="birthday-message text-center">
-        Pick a...
+        Pick a date, pick a time, pick a present (for $200).
       </h2>
     </header>
     <section class="text-center .image-container">
@@ -73,5 +86,4 @@
     </section>
   </section>
   {{/if}}
-  {{/with}}
 </template>
